@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="blob" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#3a0507" flood-opacity="0.35"/>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <radialGradient id="wax" cx="38%" cy="32%" r="78%">
+      <stop offset="0" stop-color="#D23A3F"/>
+      <stop offset="0.5" stop-color="#A9181F"/>
+      <stop offset="1" stop-color="#780C11"/>
+    </radialGradient>
+    <radialGradient id="well" cx="50%" cy="50%" r="50%">
+      <stop offset="0.7" stop-color="#A3161C"/>
+      <stop offset="1" stop-color="#8A1015"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#drop)">
+    <circle cx="100" cy="100" r="78" fill="url(#wax)" filter="url(#blob)"/>
+  </g>
+  <circle cx="101.5" cy="102" r="56" fill="none" stroke="#D9555B" stroke-opacity="0.55" stroke-width="2.5"/>
+  <circle cx="100" cy="100" r="55" fill="url(#well)"/>
+  <circle cx="100" cy="100" r="55" fill="none" stroke="#5E080C" stroke-opacity="0.45" stroke-width="2"/>
+  <circle cx="100" cy="100" r="46" fill="none" stroke="#7A0D12" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="1.5 3.2"/>
+  <path transform="translate(1.4 1.6)" d="M100 130 C 70 109, 63 92, 72 80 C 81 69, 95 71, 100 84 C 105 71, 119 69, 128 80 C 137 92, 130 109, 100 130 Z" fill="#6A0A0F" fill-opacity="0.7"/>
+  <path transform="translate(-1.2 -1.4)" d="M100 130 C 70 109, 63 92, 72 80 C 81 69, 95 71, 100 84 C 105 71, 119 69, 128 80 C 137 92, 130 109, 100 130 Z" fill="#E06469" fill-opacity="0.75"/>
+  <path d="M100 130 C 70 109, 63 92, 72 80 C 81 69, 95 71, 100 84 C 105 71, 119 69, 128 80 C 137 92, 130 109, 100 130 Z" fill="#B21C23"/>
+  <ellipse cx="72" cy="58" rx="24" ry="10" transform="rotate(-35 72 58)" fill="#fff" fill-opacity="0.16" filter="url(#soft)"/>
+</svg>

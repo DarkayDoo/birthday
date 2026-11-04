@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 240 120" width="240" height="120">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="21" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="2" seed="5" result="m"/>
+      <feColorMatrix in="m" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -10 3.7" result="holes"/>
+      <feComposite in="d" in2="holes" operator="out"/>
+    </filter>
+    <path id="arcTop" d="M 28,60 A 34,34 0 0 1 96,60"/>
+    <path id="arcBot" d="M 24,60 A 38,38 0 0 0 100,60"/>
+  </defs>
+  <g filter="url(#ink)" fill="none" stroke="#2F2F33" stroke-opacity="0.82">
+    <circle cx="62" cy="60" r="46" stroke-width="2.4"/>
+    <circle cx="62" cy="60" r="27" stroke-width="1.6"/>
+    <path d="M112,34 q16,-8 32,0 t32,0 t32,0 t28,0" stroke-width="2.4"/>
+    <path d="M112,48 q16,-8 32,0 t32,0 t32,0 t28,0" stroke-width="2.4"/>
+    <path d="M112,62 q16,-8 32,0 t32,0 t32,0 t28,0" stroke-width="2.4"/>
+    <path d="M112,76 q16,-8 32,0 t32,0 t32,0 t28,0" stroke-width="2.4"/>
+    <path d="M112,90 q16,-8 32,0 t32,0 t32,0 t28,0" stroke-width="2.4"/>
+    <g stroke="none" fill="#2F2F33" fill-opacity="0.82" font-family="Helvetica, Arial, sans-serif" font-weight="700">
+      <text font-size="11" letter-spacing="3"><textPath href="#arcTop" xlink:href="#arcTop" startOffset="50%" text-anchor="middle">LONDON</textPath></text>
+      <text font-size="8" letter-spacing="2.2" dy="7"><textPath href="#arcBot" xlink:href="#arcBot" startOffset="50%" text-anchor="middle">UNITED KINGDOM</textPath></text>
+      <text x="62" y="58" font-size="10.5" text-anchor="middle" letter-spacing="1">02 NOV</text>
+      <text x="62" y="71" font-size="10.5" text-anchor="middle" letter-spacing="1">2026</text>
+    </g>
+  </g>
+</svg>

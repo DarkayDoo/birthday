@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="8" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.3" numOctaves="2" seed="13" result="m"/>
+      <feColorMatrix in="m" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -10 3.7" result="holes"/>
+      <feComposite in="d" in2="holes" operator="out"/>
+    </filter>
+    <path id="pTop" d="M 22,60 A 38,38 0 0 1 98,60"/>
+    <path id="pBot" d="M 18,60 A 42,42 0 0 0 102,60"/>
+  </defs>
+  <g filter="url(#ink)">
+    <g fill="none" stroke="#3A3550" stroke-opacity="0.8">
+      <circle cx="60" cy="60" r="54" stroke-width="2.2"/>
+      <circle cx="60" cy="60" r="50" stroke-width="1"/>
+      <line x1="10" y1="50" x2="110" y2="50" stroke-width="1.4"/>
+      <line x1="10" y1="70" x2="110" y2="70" stroke-width="1.4"/>
+    </g>
+    <g fill="#3A3550" fill-opacity="0.8" font-family="Helvetica, Arial, sans-serif" font-weight="700">
+      <text font-size="12" letter-spacing="3.5"><textPath href="#pTop" xlink:href="#pTop" startOffset="50%" text-anchor="middle">PRAHA 1</textPath></text>
+      <text font-size="7.5" letter-spacing="2" dy="6"><textPath href="#pBot" xlink:href="#pBot" startOffset="50%" text-anchor="middle">ČESKÁ REPUBLIKA</textPath></text>
+      <text x="60" y="64" font-size="11" text-anchor="middle" letter-spacing="1">05.11.26</text>
+    </g>
+  </g>
+</svg>
